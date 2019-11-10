@@ -1,1 +1,1 @@
-pbase folder contains the vivado project files
+Vivado folder contains the vivado project files
