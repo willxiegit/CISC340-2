@@ -88,6 +88,9 @@ int main()
 	}
 	XSysMon_SetSequencerMode(xadc_inst_ptr,XSM_SEQ_MODE_CONTINPASS);
 
+	int active = 0xF;
+	int holiday = 0;
+
 	while(1){
 
 		/*********PushButton, Switch, and Led Section*/
@@ -100,24 +103,25 @@ int main()
 		rpiin = (jbin & 0xF0)>>4; //jb[7..4];
 		
 		// turn on the system if the user activates on their device
+		active = rpiin;
 		
-		if (rpiin == 0xF)
+		if (rpiin == 0x000F)
+			bcdout = 0x0000;
+		else if (rpiin == 0x000B)
 			bcdout = 0x1111;
-		else if (rpiin == 0xE)
-			bcdout = 0x1110;
-		else if (rpiin == 0xD)
-			bcdout = 0x1101;
-		else if (rpiin == 0xC)
-			bcdout = 0x1100;
+		else if (rpiin == 0x00F0)
+			bcdout = 0x2222;
+		else if (rpiin == 0x00B0)
+			bcdout = 0x3333;
 			
-		if (rpiin == 0xE || 0xC) {
-			if (rpiin == 0xD || 0xC) { // holiday mode off, function like normal
+		if (rpiin == 0xF){
+			if (holiday == 0) { // holiday mode off, function like normal
 				if (digin == 0xF && XADC_Buf[3]>>4 > 1500) // sound the buzzer if motion is detected and light is below threshold
 					jcout = 3;
 				else if (digin == 0xD && XADC_Buf[3]>>4 > 1500)// turn off buzzer if there is no motion and light is above the threshold
 					jcout = 0;
 			}
-			else if (rpiin == 0xF || 0xE) { // holiday mode on, sound the buzzer at any intruder
+			else if (holiday == 1) { // holiday mode on, sound the buzzer at any intruder
 				if (digin == 0xF) // sound the buzzer if motion is detected
 					jcout = 3;
 				else if (digin == 0xD)// turn off buzzer if there is no motion
@@ -146,7 +150,7 @@ int main()
 		    xil_printf("RawData %s %d \n",channel[Index],(int)(XADC_Buf[Index]>>4));
 		}
 		xil_printf("   \n");
-		sleep(1);	
+		//sleep(1);	
 
 		/****************end of section*************/
 	} //end of while(1)

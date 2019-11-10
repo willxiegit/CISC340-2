@@ -3487,3 +3487,687 @@ mb-size pbaseapp.elf  |tee "pbaseapp.elf.size"
 20:24:31 **** Incremental Build of configuration Debug for project pbaseapp ****
 make all 
 make: Nothing to be done for `all'.
+22:06:45 **** Auto Build of configuration Debug for project pbaseapp ****
+make all 
+'Building file: ../src/pbaseapp.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/pbaseapp.o" -I../../pbaseapp_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/pbaseapp.d" -MT"src/pbaseapp.o" -o "src/pbaseapp.o" "../src/pbaseapp.c"
+../src/pbaseapp.c: In function 'main':
+../src/pbaseapp.c:108:12: error: subscripted value is neither array nor pointer nor vector
+   if (rpiin[6] == 0xF)
+            ^
+../src/pbaseapp.c:91:6: warning: variable 'active' set but not used [-Wunused-but-set-variable]
+  int active = 0xF;
+      ^~~~~~
+../src/pbaseapp.c:34:6: warning: variable 'sw' set but not used [-Wunused-but-set-variable]
+  u32 sw;
+      ^~
+make: *** [src/pbaseapp.o] Error 1
+22:06:59 **** Auto Build of configuration Debug for project pbaseapp ****
+make all 
+'Building file: ../src/pbaseapp.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/pbaseapp.o" -I../../pbaseapp_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/pbaseapp.d" -MT"src/pbaseapp.o" -o "src/pbaseapp.o" "../src/pbaseapp.c"
+../src/pbaseapp.c: In function 'main':
+../src/pbaseapp.c:91:6: warning: variable 'active' set but not used [-Wunused-but-set-variable]
+  int active = 0xF;
+      ^~~~~~
+../src/pbaseapp.c:34:6: warning: variable 'sw' set but not used [-Wunused-but-set-variable]
+  u32 sw;
+      ^~
+../src/pbaseapp.c:128:3: warning: 'led' is used uninitialized in this function [-Wuninitialized]
+   XGpio_DiscreteWrite(&gpio, 2, led);
+   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+'Finished building: ../src/pbaseapp.c'
+' '
+'Building target: pbaseapp.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../pbaseapp_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "pbaseapp.elf"  ./src/pbaseapp.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: pbaseapp.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size pbaseapp.elf  |tee "pbaseapp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11612	    404	   3152	  15168	   3b40	pbaseapp.elf
+'Finished building: pbaseapp.elf.size'
+' '
+22:10:27 **** Auto Build of configuration Debug for project pbaseapp ****
+make all 
+'Building file: ../src/pbaseapp.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/pbaseapp.o" -I../../pbaseapp_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/pbaseapp.d" -MT"src/pbaseapp.o" -o "src/pbaseapp.o" "../src/pbaseapp.c"
+../src/pbaseapp.c: In function 'main':
+../src/pbaseapp.c:108:16: error: invalid suffix "x" on integer constant
+   if (rpiin == 0x***F)
+                ^~
+../src/pbaseapp.c:108:21: error: 'F' undeclared (first use in this function)
+   if (rpiin == 0x***F)
+                     ^
+../src/pbaseapp.c:108:21: note: each undeclared identifier is reported only once for each function it appears in
+../src/pbaseapp.c:110:21: error: invalid suffix "x" on integer constant
+   else if (rpiin == 0x***B)
+                     ^~
+../src/pbaseapp.c:110:26: error: 'B' undeclared (first use in this function)
+   else if (rpiin == 0x***B)
+                          ^
+../src/pbaseapp.c:112:21: error: invalid suffix "x" on integer constant
+   else if (rpiin == 0x**B*)
+                     ^~
+../src/pbaseapp.c:112:27: error: expected expression before ')' token
+   else if (rpiin == 0x**B*)
+                           ^
+../src/pbaseapp.c:114:21: error: invalid suffix "x" on integer constant
+   else if (rpiin == 0x**B*)
+                     ^~
+../src/pbaseapp.c:91:6: warning: variable 'active' set but not used [-Wunused-but-set-variable]
+  int active = 0xF;
+      ^~~~~~
+../src/pbaseapp.c:34:6: warning: variable 'sw' set but not used [-Wunused-but-set-variable]
+  u32 sw;
+      ^~
+make: *** [src/pbaseapp.o] Error 1
+22:12:54 **** Auto Build of configuration Debug for project pbaseapp ****
+make all 
+'Building file: ../src/pbaseapp.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/pbaseapp.o" -I../../pbaseapp_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/pbaseapp.d" -MT"src/pbaseapp.o" -o "src/pbaseapp.o" "../src/pbaseapp.c"
+../src/pbaseapp.c: In function 'main':
+../src/pbaseapp.c:108:16: error: invalid suffix "x" on integer constant
+   if (rpiin == 0x???F)
+                ^~
+../src/pbaseapp.c:108:19: error: expected expression before '?' token
+   if (rpiin == 0x???F)
+                   ^
+../src/pbaseapp.c:108:21: error: 'F' undeclared (first use in this function)
+   if (rpiin == 0x???F)
+                     ^
+../src/pbaseapp.c:108:21: note: each undeclared identifier is reported only once for each function it appears in
+../src/pbaseapp.c:110:21: error: invalid suffix "x" on integer constant
+   else if (rpiin == 0x***B)
+                     ^~
+../src/pbaseapp.c:112:21: error: invalid suffix "x" on integer constant
+   else if (rpiin == 0x**B*)
+                     ^~
+../src/pbaseapp.c:112:25: error: 'B' undeclared (first use in this function)
+   else if (rpiin == 0x**B*)
+                         ^
+../src/pbaseapp.c:112:27: error: expected expression before ')' token
+   else if (rpiin == 0x**B*)
+                           ^
+../src/pbaseapp.c:114:21: error: invalid suffix "x" on integer constant
+   else if (rpiin == 0x**B*)
+                     ^~
+../src/pbaseapp.c:91:6: warning: variable 'active' set but not used [-Wunused-but-set-variable]
+  int active = 0xF;
+      ^~~~~~
+../src/pbaseapp.c:34:6: warning: variable 'sw' set but not used [-Wunused-but-set-variable]
+  u32 sw;
+      ^~
+make: *** [src/pbaseapp.o] Error 1
+22:13:09 **** Auto Build of configuration Debug for project pbaseapp ****
+make all 
+'Building file: ../src/pbaseapp.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/pbaseapp.o" -I../../pbaseapp_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/pbaseapp.d" -MT"src/pbaseapp.o" -o "src/pbaseapp.o" "../src/pbaseapp.c"
+../src/pbaseapp.c: In function 'main':
+../src/pbaseapp.c:108:16: error: too many decimal points in number
+   if (rpiin == 0x...F)
+                ^~~~~~
+../src/pbaseapp.c:110:21: error: invalid suffix "x" on integer constant
+   else if (rpiin == 0x***B)
+                     ^~
+../src/pbaseapp.c:110:26: error: 'B' undeclared (first use in this function); did you mean '_B'?
+   else if (rpiin == 0x***B)
+                          ^
+                          _B
+../src/pbaseapp.c:110:26: note: each undeclared identifier is reported only once for each function it appears in
+../src/pbaseapp.c:112:21: error: invalid suffix "x" on integer constant
+   else if (rpiin == 0x**B*)
+                     ^~
+../src/pbaseapp.c:112:27: error: expected expression before ')' token
+   else if (rpiin == 0x**B*)
+                           ^
+../src/pbaseapp.c:114:21: error: invalid suffix "x" on integer constant
+   else if (rpiin == 0x**B*)
+                     ^~
+../src/pbaseapp.c:91:6: warning: variable 'active' set but not used [-Wunused-but-set-variable]
+  int active = 0xF;
+      ^~~~~~
+../src/pbaseapp.c:34:6: warning: variable 'sw' set but not used [-Wunused-but-set-variable]
+  u32 sw;
+      ^~
+make: *** [src/pbaseapp.o] Error 1
+22:13:25 **** Auto Build of configuration Debug for project pbaseapp ****
+make all 
+'Building file: ../src/pbaseapp.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/pbaseapp.o" -I../../pbaseapp_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/pbaseapp.d" -MT"src/pbaseapp.o" -o "src/pbaseapp.o" "../src/pbaseapp.c"
+../src/pbaseapp.c: In function 'main':
+../src/pbaseapp.c:108:16: error: hexadecimal floating constants require an exponent
+   if (rpiin == 0x.F)
+                ^~~~
+../src/pbaseapp.c:110:21: error: invalid suffix "x" on integer constant
+   else if (rpiin == 0x***B)
+                     ^~
+../src/pbaseapp.c:110:26: error: 'B' undeclared (first use in this function); did you mean '_B'?
+   else if (rpiin == 0x***B)
+                          ^
+                          _B
+../src/pbaseapp.c:110:26: note: each undeclared identifier is reported only once for each function it appears in
+../src/pbaseapp.c:112:21: error: invalid suffix "x" on integer constant
+   else if (rpiin == 0x**B*)
+                     ^~
+../src/pbaseapp.c:112:27: error: expected expression before ')' token
+   else if (rpiin == 0x**B*)
+                           ^
+../src/pbaseapp.c:114:21: error: invalid suffix "x" on integer constant
+   else if (rpiin == 0x**B*)
+                     ^~
+../src/pbaseapp.c:91:6: warning: variable 'active' set but not used [-Wunused-but-set-variable]
+  int active = 0xF;
+      ^~~~~~
+../src/pbaseapp.c:34:6: warning: variable 'sw' set but not used [-Wunused-but-set-variable]
+  u32 sw;
+      ^~
+make: *** [src/pbaseapp.o] Error 1
+22:13:29 **** Auto Build of configuration Debug for project pbaseapp ****
+make all 
+'Building file: ../src/pbaseapp.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/pbaseapp.o" -I../../pbaseapp_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/pbaseapp.d" -MT"src/pbaseapp.o" -o "src/pbaseapp.o" "../src/pbaseapp.c"
+../src/pbaseapp.c: In function 'main':
+../src/pbaseapp.c:108:16: error: invalid suffix "x" on integer constant
+   if (rpiin == 0x?F)
+                ^~
+../src/pbaseapp.c:108:19: error: 'F' undeclared (first use in this function)
+   if (rpiin == 0x?F)
+                   ^
+../src/pbaseapp.c:108:19: note: each undeclared identifier is reported only once for each function it appears in
+../src/pbaseapp.c:108:20: error: expected ':' before ')' token
+   if (rpiin == 0x?F)
+                    ^
+../src/pbaseapp.c:110:21: error: invalid suffix "x" on integer constant
+   else if (rpiin == 0x***B)
+                     ^~
+../src/pbaseapp.c:112:21: error: invalid suffix "x" on integer constant
+   else if (rpiin == 0x**B*)
+                     ^~
+../src/pbaseapp.c:112:25: error: 'B' undeclared (first use in this function)
+   else if (rpiin == 0x**B*)
+                         ^
+../src/pbaseapp.c:112:27: error: expected expression before ')' token
+   else if (rpiin == 0x**B*)
+                           ^
+../src/pbaseapp.c:114:21: error: invalid suffix "x" on integer constant
+   else if (rpiin == 0x**B*)
+                     ^~
+../src/pbaseapp.c:91:6: warning: variable 'active' set but not used [-Wunused-but-set-variable]
+  int active = 0xF;
+      ^~~~~~
+../src/pbaseapp.c:34:6: warning: variable 'sw' set but not used [-Wunused-but-set-variable]
+  u32 sw;
+      ^~
+make: *** [src/pbaseapp.o] Error 1
+22:13:33 **** Auto Build of configuration Debug for project pbaseapp ****
+make all 
+'Building file: ../src/pbaseapp.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/pbaseapp.o" -I../../pbaseapp_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/pbaseapp.d" -MT"src/pbaseapp.o" -o "src/pbaseapp.o" "../src/pbaseapp.c"
+../src/pbaseapp.c: In function 'main':
+../src/pbaseapp.c:108:16: error: invalid suffix "x" on integer constant
+   if (rpiin == 0x*F)
+                ^~
+../src/pbaseapp.c:108:19: error: 'F' undeclared (first use in this function)
+   if (rpiin == 0x*F)
+                   ^
+../src/pbaseapp.c:108:19: note: each undeclared identifier is reported only once for each function it appears in
+../src/pbaseapp.c:110:21: error: invalid suffix "x" on integer constant
+   else if (rpiin == 0x***B)
+                     ^~
+../src/pbaseapp.c:110:26: error: 'B' undeclared (first use in this function)
+   else if (rpiin == 0x***B)
+                          ^
+../src/pbaseapp.c:112:21: error: invalid suffix "x" on integer constant
+   else if (rpiin == 0x**B*)
+                     ^~
+../src/pbaseapp.c:112:27: error: expected expression before ')' token
+   else if (rpiin == 0x**B*)
+                           ^
+../src/pbaseapp.c:114:21: error: invalid suffix "x" on integer constant
+   else if (rpiin == 0x**B*)
+                     ^~
+../src/pbaseapp.c:91:6: warning: variable 'active' set but not used [-Wunused-but-set-variable]
+  int active = 0xF;
+      ^~~~~~
+../src/pbaseapp.c:34:6: warning: variable 'sw' set but not used [-Wunused-but-set-variable]
+  u32 sw;
+      ^~
+make: *** [src/pbaseapp.o] Error 1
+22:14:39 **** Auto Build of configuration Debug for project pbaseapp ****
+make all 
+'Building file: ../src/pbaseapp.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/pbaseapp.o" -I../../pbaseapp_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/pbaseapp.d" -MT"src/pbaseapp.o" -o "src/pbaseapp.o" "../src/pbaseapp.c"
+../src/pbaseapp.c: In function 'main':
+../src/pbaseapp.c:110:21: error: invalid suffix "x" on integer constant
+   else if (rpiin == 0x***B)
+                     ^~
+../src/pbaseapp.c:110:26: error: 'B' undeclared (first use in this function); did you mean '_B'?
+   else if (rpiin == 0x***B)
+                          ^
+                          _B
+../src/pbaseapp.c:110:26: note: each undeclared identifier is reported only once for each function it appears in
+../src/pbaseapp.c:112:21: error: invalid suffix "x" on integer constant
+   else if (rpiin == 0x**B*)
+                     ^~
+../src/pbaseapp.c:112:27: error: expected expression before ')' token
+   else if (rpiin == 0x**B*)
+                           ^
+../src/pbaseapp.c:114:21: error: invalid suffix "x" on integer constant
+   else if (rpiin == 0x**B*)
+                     ^~
+../src/pbaseapp.c:91:6: warning: variable 'active' set but not used [-Wunused-but-set-variable]
+  int active = 0xF;
+      ^~~~~~
+../src/pbaseapp.c:34:6: warning: variable 'sw' set but not used [-Wunused-but-set-variable]
+  u32 sw;
+      ^~
+make: *** [src/pbaseapp.o] Error 1
+22:15:36 **** Auto Build of configuration Debug for project pbaseapp ****
+make all 
+'Building file: ../src/pbaseapp.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/pbaseapp.o" -I../../pbaseapp_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/pbaseapp.d" -MT"src/pbaseapp.o" -o "src/pbaseapp.o" "../src/pbaseapp.c"
+../src/pbaseapp.c: In function 'main':
+../src/pbaseapp.c:91:6: warning: variable 'active' set but not used [-Wunused-but-set-variable]
+  int active = 0xF;
+      ^~~~~~
+../src/pbaseapp.c:34:6: warning: variable 'sw' set but not used [-Wunused-but-set-variable]
+  u32 sw;
+      ^~
+../src/pbaseapp.c:132:3: warning: 'led' is used uninitialized in this function [-Wuninitialized]
+   XGpio_DiscreteWrite(&gpio, 2, led);
+   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+'Finished building: ../src/pbaseapp.c'
+' '
+'Building target: pbaseapp.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../pbaseapp_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "pbaseapp.elf"  ./src/pbaseapp.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: pbaseapp.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size pbaseapp.elf  |tee "pbaseapp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11660	    404	   3152	  15216	   3b70	pbaseapp.elf
+'Finished building: pbaseapp.elf.size'
+' '
+22:15:41 **** Incremental Build of configuration Debug for project pbaseapp ****
+make all 
+make: Nothing to be done for `all'.
+15:32:51 **** Auto Build of configuration Debug for project pbaseapp ****
+make all 
+'Building file: ../src/pbaseapp.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/pbaseapp.o" -I../../pbaseapp_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/pbaseapp.d" -MT"src/pbaseapp.o" -o "src/pbaseapp.o" "../src/pbaseapp.c"
+../src/pbaseapp.c: In function 'main':
+../src/pbaseapp.c:153:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^~~~~
+../src/pbaseapp.c:91:6: warning: variable 'active' set but not used [-Wunused-but-set-variable]
+  int active = 0xF;
+      ^~~~~~
+../src/pbaseapp.c:34:6: warning: variable 'sw' set but not used [-Wunused-but-set-variable]
+  u32 sw;
+      ^~
+../src/pbaseapp.c:132:3: warning: 'led' is used uninitialized in this function [-Wuninitialized]
+   XGpio_DiscreteWrite(&gpio, 2, led);
+   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+'Finished building: ../src/pbaseapp.c'
+' '
+'Building target: pbaseapp.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../pbaseapp_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "pbaseapp.elf"  ./src/pbaseapp.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: pbaseapp.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size pbaseapp.elf  |tee "pbaseapp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11752	    404	   3148	  15304	   3bc8	pbaseapp.elf
+'Finished building: pbaseapp.elf.size'
+' '
+15:33:01 **** Incremental Build of configuration Debug for project pbaseapp ****
+make all 
+make: Nothing to be done for `all'.
+15:36:41 **** Auto Build of configuration Debug for project pbaseapp ****
+make all 
+'Building file: ../src/pbaseapp.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/pbaseapp.o" -I../../pbaseapp_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/pbaseapp.d" -MT"src/pbaseapp.o" -o "src/pbaseapp.o" "../src/pbaseapp.c"
+../src/pbaseapp.c: In function 'main':
+../src/pbaseapp.c:150:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^~~~~
+../src/pbaseapp.c:91:6: warning: variable 'active' set but not used [-Wunused-but-set-variable]
+  int active = 0xF;
+      ^~~~~~
+../src/pbaseapp.c:34:6: warning: variable 'sw' set but not used [-Wunused-but-set-variable]
+  u32 sw;
+      ^~
+../src/pbaseapp.c:129:3: warning: 'led' is used uninitialized in this function [-Wuninitialized]
+   XGpio_DiscreteWrite(&gpio, 2, led);
+   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+'Finished building: ../src/pbaseapp.c'
+' '
+'Building target: pbaseapp.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../pbaseapp_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "pbaseapp.elf"  ./src/pbaseapp.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: pbaseapp.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size pbaseapp.elf  |tee "pbaseapp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11704	    404	   3148	  15256	   3b98	pbaseapp.elf
+'Finished building: pbaseapp.elf.size'
+' '
+15:36:52 **** Incremental Build of configuration Debug for project pbaseapp ****
+make all 
+make: Nothing to be done for `all'.
+15:42:22 **** Auto Build of configuration Debug for project pbaseapp ****
+make all 
+'Building file: ../src/pbaseapp.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/pbaseapp.o" -I../../pbaseapp_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/pbaseapp.d" -MT"src/pbaseapp.o" -o "src/pbaseapp.o" "../src/pbaseapp.c"
+../src/pbaseapp.c: In function 'main':
+../src/pbaseapp.c:154:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^~~~~
+../src/pbaseapp.c:91:6: warning: variable 'active' set but not used [-Wunused-but-set-variable]
+  int active = 0xF;
+      ^~~~~~
+../src/pbaseapp.c:34:6: warning: variable 'sw' set but not used [-Wunused-but-set-variable]
+  u32 sw;
+      ^~
+../src/pbaseapp.c:133:3: warning: 'led' is used uninitialized in this function [-Wuninitialized]
+   XGpio_DiscreteWrite(&gpio, 2, led);
+   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+'Finished building: ../src/pbaseapp.c'
+' '
+'Building target: pbaseapp.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../pbaseapp_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "pbaseapp.elf"  ./src/pbaseapp.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: pbaseapp.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size pbaseapp.elf  |tee "pbaseapp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11752	    404	   3148	  15304	   3bc8	pbaseapp.elf
+'Finished building: pbaseapp.elf.size'
+' '
+15:42:39 **** Auto Build of configuration Debug for project pbaseapp ****
+make all 
+'Building file: ../src/pbaseapp.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/pbaseapp.o" -I../../pbaseapp_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/pbaseapp.d" -MT"src/pbaseapp.o" -o "src/pbaseapp.o" "../src/pbaseapp.c"
+../src/pbaseapp.c: In function 'main':
+../src/pbaseapp.c:154:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^~~~~
+../src/pbaseapp.c:91:6: warning: variable 'active' set but not used [-Wunused-but-set-variable]
+  int active = 0xF;
+      ^~~~~~
+../src/pbaseapp.c:34:6: warning: variable 'sw' set but not used [-Wunused-but-set-variable]
+  u32 sw;
+      ^~
+../src/pbaseapp.c:133:3: warning: 'led' is used uninitialized in this function [-Wuninitialized]
+   XGpio_DiscreteWrite(&gpio, 2, led);
+   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+'Finished building: ../src/pbaseapp.c'
+' '
+'Building target: pbaseapp.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../pbaseapp_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "pbaseapp.elf"  ./src/pbaseapp.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: pbaseapp.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size pbaseapp.elf  |tee "pbaseapp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11756	    404	   3152	  15312	   3bd0	pbaseapp.elf
+'Finished building: pbaseapp.elf.size'
+' '
+15:42:48 **** Auto Build of configuration Debug for project pbaseapp ****
+make all 
+'Building file: ../src/pbaseapp.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/pbaseapp.o" -I../../pbaseapp_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/pbaseapp.d" -MT"src/pbaseapp.o" -o "src/pbaseapp.o" "../src/pbaseapp.c"
+../src/pbaseapp.c: In function 'main':
+../src/pbaseapp.c:154:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^~~~~
+../src/pbaseapp.c:91:6: warning: variable 'active' set but not used [-Wunused-but-set-variable]
+  int active = 0xF;
+      ^~~~~~
+../src/pbaseapp.c:34:6: warning: variable 'sw' set but not used [-Wunused-but-set-variable]
+  u32 sw;
+      ^~
+../src/pbaseapp.c:133:3: warning: 'led' is used uninitialized in this function [-Wuninitialized]
+   XGpio_DiscreteWrite(&gpio, 2, led);
+   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+'Finished building: ../src/pbaseapp.c'
+' '
+'Building target: pbaseapp.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../pbaseapp_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "pbaseapp.elf"  ./src/pbaseapp.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: pbaseapp.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size pbaseapp.elf  |tee "pbaseapp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11760	    404	   3148	  15312	   3bd0	pbaseapp.elf
+'Finished building: pbaseapp.elf.size'
+' '
+15:44:12 **** Auto Build of configuration Debug for project pbaseapp ****
+make all 
+'Building file: ../src/pbaseapp.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/pbaseapp.o" -I../../pbaseapp_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/pbaseapp.d" -MT"src/pbaseapp.o" -o "src/pbaseapp.o" "../src/pbaseapp.c"
+../src/pbaseapp.c: In function 'main':
+../src/pbaseapp.c:154:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^~~~~
+../src/pbaseapp.c:91:6: warning: variable 'active' set but not used [-Wunused-but-set-variable]
+  int active = 0xF;
+      ^~~~~~
+../src/pbaseapp.c:34:6: warning: variable 'sw' set but not used [-Wunused-but-set-variable]
+  u32 sw;
+      ^~
+../src/pbaseapp.c:133:3: warning: 'led' is used uninitialized in this function [-Wuninitialized]
+   XGpio_DiscreteWrite(&gpio, 2, led);
+   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+'Finished building: ../src/pbaseapp.c'
+' '
+'Building target: pbaseapp.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../pbaseapp_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "pbaseapp.elf"  ./src/pbaseapp.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: pbaseapp.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size pbaseapp.elf  |tee "pbaseapp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11692	    404	   3152	  15248	   3b90	pbaseapp.elf
+'Finished building: pbaseapp.elf.size'
+' '
+15:44:27 **** Incremental Build of configuration Debug for project pbaseapp ****
+make all 
+make: Nothing to be done for `all'.
+15:52:57 **** Auto Build of configuration Debug for project pbaseapp ****
+make all 
+'Building file: ../src/pbaseapp.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/pbaseapp.o" -I../../pbaseapp_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/pbaseapp.d" -MT"src/pbaseapp.o" -o "src/pbaseapp.o" "../src/pbaseapp.c"
+../src/pbaseapp.c: In function 'main':
+../src/pbaseapp.c:154:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^~~~~
+../src/pbaseapp.c:91:6: warning: variable 'active' set but not used [-Wunused-but-set-variable]
+  int active = 0xF;
+      ^~~~~~
+../src/pbaseapp.c:34:6: warning: variable 'sw' set but not used [-Wunused-but-set-variable]
+  u32 sw;
+      ^~
+../src/pbaseapp.c:133:3: warning: 'led' is used uninitialized in this function [-Wuninitialized]
+   XGpio_DiscreteWrite(&gpio, 2, led);
+   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+'Finished building: ../src/pbaseapp.c'
+' '
+'Building target: pbaseapp.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../pbaseapp_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "pbaseapp.elf"  ./src/pbaseapp.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: pbaseapp.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size pbaseapp.elf  |tee "pbaseapp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11684	    404	   3152	  15240	   3b88	pbaseapp.elf
+'Finished building: pbaseapp.elf.size'
+' '
+15:53:05 **** Incremental Build of configuration Debug for project pbaseapp ****
+make all 
+make: Nothing to be done for `all'.
+15:56:59 **** Auto Build of configuration Debug for project pbaseapp ****
+make all 
+'Building file: ../src/pbaseapp.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/pbaseapp.o" -I../../pbaseapp_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/pbaseapp.d" -MT"src/pbaseapp.o" -o "src/pbaseapp.o" "../src/pbaseapp.c"
+../src/pbaseapp.c: In function 'main':
+../src/pbaseapp.c:103:3: error: 'active' undeclared (first use in this function)
+   active = rpiin;
+   ^~~~~~
+../src/pbaseapp.c:103:3: note: each undeclared identifier is reported only once for each function it appears in
+../src/pbaseapp.c:151:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^~~~~
+../src/pbaseapp.c:34:6: warning: variable 'sw' set but not used [-Wunused-but-set-variable]
+  u32 sw;
+      ^~
+make: *** [src/pbaseapp.o] Error 1
+15:57:06 **** Auto Build of configuration Debug for project pbaseapp ****
+make all 
+'Building file: ../src/pbaseapp.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/pbaseapp.o" -I../../pbaseapp_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/pbaseapp.d" -MT"src/pbaseapp.o" -o "src/pbaseapp.o" "../src/pbaseapp.c"
+../src/pbaseapp.c: In function 'main':
+../src/pbaseapp.c:150:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^~~~~
+../src/pbaseapp.c:34:6: warning: variable 'sw' set but not used [-Wunused-but-set-variable]
+  u32 sw;
+      ^~
+../src/pbaseapp.c:129:3: warning: 'led' is used uninitialized in this function [-Wuninitialized]
+   XGpio_DiscreteWrite(&gpio, 2, led);
+   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+'Finished building: ../src/pbaseapp.c'
+' '
+'Building target: pbaseapp.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../pbaseapp_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "pbaseapp.elf"  ./src/pbaseapp.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: pbaseapp.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size pbaseapp.elf  |tee "pbaseapp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11660	    404	   3152	  15216	   3b70	pbaseapp.elf
+'Finished building: pbaseapp.elf.size'
+' '
+15:57:09 **** Incremental Build of configuration Debug for project pbaseapp ****
+make all 
+make: Nothing to be done for `all'.
+15:57:33 **** Auto Build of configuration Debug for project pbaseapp ****
+make all 
+'Building file: ../src/pbaseapp.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/pbaseapp.o" -I../../pbaseapp_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/pbaseapp.d" -MT"src/pbaseapp.o" -o "src/pbaseapp.o" "../src/pbaseapp.c"
+../src/pbaseapp.c: In function 'main':
+../src/pbaseapp.c:150:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^~~~~
+../src/pbaseapp.c:34:6: warning: variable 'sw' set but not used [-Wunused-but-set-variable]
+  u32 sw;
+      ^~
+../src/pbaseapp.c:129:3: warning: 'led' is used uninitialized in this function [-Wuninitialized]
+   XGpio_DiscreteWrite(&gpio, 2, led);
+   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+'Finished building: ../src/pbaseapp.c'
+' '
+'Building target: pbaseapp.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../pbaseapp_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "pbaseapp.elf"  ./src/pbaseapp.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: pbaseapp.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size pbaseapp.elf  |tee "pbaseapp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11660	    404	   3152	  15216	   3b70	pbaseapp.elf
+'Finished building: pbaseapp.elf.size'
+' '
+15:57:36 **** Incremental Build of configuration Debug for project pbaseapp ****
+make all 
+make: Nothing to be done for `all'.
+15:58:53 **** Auto Build of configuration Debug for project pbaseapp ****
+make all 
+'Building file: ../src/pbaseapp.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/pbaseapp.o" -I../../pbaseapp_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/pbaseapp.d" -MT"src/pbaseapp.o" -o "src/pbaseapp.o" "../src/pbaseapp.c"
+../src/pbaseapp.c: In function 'main':
+../src/pbaseapp.c:150:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^~~~~
+../src/pbaseapp.c:34:6: warning: variable 'sw' set but not used [-Wunused-but-set-variable]
+  u32 sw;
+      ^~
+../src/pbaseapp.c:129:3: warning: 'led' is used uninitialized in this function [-Wuninitialized]
+   XGpio_DiscreteWrite(&gpio, 2, led);
+   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+'Finished building: ../src/pbaseapp.c'
+' '
+'Building target: pbaseapp.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../pbaseapp_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "pbaseapp.elf"  ./src/pbaseapp.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: pbaseapp.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size pbaseapp.elf  |tee "pbaseapp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11660	    404	   3152	  15216	   3b70	pbaseapp.elf
+'Finished building: pbaseapp.elf.size'
+' '
+16:00:42 **** Auto Build of configuration Debug for project pbaseapp ****
+make all 
+'Building file: ../src/pbaseapp.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/pbaseapp.o" -I../../pbaseapp_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/pbaseapp.d" -MT"src/pbaseapp.o" -o "src/pbaseapp.o" "../src/pbaseapp.c"
+../src/pbaseapp.c: In function 'main':
+../src/pbaseapp.c:149:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^~~~~
+../src/pbaseapp.c:34:6: warning: variable 'sw' set but not used [-Wunused-but-set-variable]
+  u32 sw;
+      ^~
+../src/pbaseapp.c:128:3: warning: 'led' is used uninitialized in this function [-Wuninitialized]
+   XGpio_DiscreteWrite(&gpio, 2, led);
+   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+'Finished building: ../src/pbaseapp.c'
+' '
+'Building target: pbaseapp.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../pbaseapp_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "pbaseapp.elf"  ./src/pbaseapp.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: pbaseapp.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size pbaseapp.elf  |tee "pbaseapp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11660	    404	   3152	  15216	   3b70	pbaseapp.elf
+'Finished building: pbaseapp.elf.size'
+' '
+16:00:47 **** Incremental Build of configuration Debug for project pbaseapp ****
+make all 
+make: Nothing to be done for `all'.

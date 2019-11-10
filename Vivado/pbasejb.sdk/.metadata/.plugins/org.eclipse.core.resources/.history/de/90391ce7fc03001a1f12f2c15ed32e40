@@ -109,9 +109,10 @@ int main()
 			bcdout = 0x1101;
 		else if (rpiin == 0xC)
 			bcdout = 0x1100;
+
 			
 		if (rpiin == 0xE || 0xC) {
-			if (rpiin == 0xD || 0xC) { // holiday mode off, function like normal
+			if (rpiin == 0xF || 0xE) { // holiday mode off, function like normal
 				if (digin == 0xF && XADC_Buf[3]>>4 > 1500) // sound the buzzer if motion is detected and light is below threshold
 					jcout = 3;
 				else if (digin == 0xD && XADC_Buf[3]>>4 > 1500)// turn off buzzer if there is no motion and light is above the threshold
