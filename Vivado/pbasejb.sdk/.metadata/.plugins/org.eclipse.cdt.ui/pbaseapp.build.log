@@ -1,6 +1,34 @@
-16:00:47 **** Incremental Build of configuration Debug for project pbaseapp ****
+19:18:22 **** Auto Build of configuration Debug for project pbaseapp ****
 make all 
-make: Nothing to be done for `all'.
+'Building file: ../src/pbaseapp.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/pbaseapp.o" -I../../pbaseapp_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/pbaseapp.d" -MT"src/pbaseapp.o" -o "src/pbaseapp.o" "../src/pbaseapp.c"
+../src/pbaseapp.c: In function 'main':
+../src/pbaseapp.c:166:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   sleep(1);
+   ^~~~~
+../src/pbaseapp.c:34:6: warning: variable 'sw' set but not used [-Wunused-but-set-variable]
+  u32 sw;
+      ^~
+../src/pbaseapp.c:33:6: warning: variable 'btn' set but not used [-Wunused-but-set-variable]
+  u32 btn, led;
+      ^~~
+../src/pbaseapp.c:143:3: warning: 'led' is used uninitialized in this function [-Wuninitialized]
+   XGpio_DiscreteWrite(&gpio, 2, led);
+   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+'Finished building: ../src/pbaseapp.c'
+' '
+'Building target: pbaseapp.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../pbaseapp_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "pbaseapp.elf"  ./src/pbaseapp.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: pbaseapp.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size pbaseapp.elf  |tee "pbaseapp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11468	    388	   3152	  15008	   3aa0	pbaseapp.elf
+'Finished building: pbaseapp.elf.size'
+' '
 
-16:00:47 Build Finished (took 153ms)
+19:18:23 Build Finished (took 1s.230ms)
 

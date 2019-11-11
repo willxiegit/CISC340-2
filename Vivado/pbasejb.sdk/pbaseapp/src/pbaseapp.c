@@ -57,7 +57,7 @@ int main()
 
 //	init_platform();
 
-	xil_printf("XADC Example\n\r");
+	//xil_printf("XADC Example\n\r");
 
 	xadc_config = XSysMon_LookupConfig(xadc);
 	if (NULL == xadc_config){
@@ -99,55 +99,71 @@ int main()
 		digin = jbin & 0xF; //jb[3..0]
 		rpiin = (jbin & 0xF0)>>4; //jb[7..4];
 		
-		// turn on the system if the user activates on their device
+		int active = 1;
+		int holiday = 0;
 		
-		if (rpiin == 0xF)
+		if (rpiin == 0xF) {
 			bcdout = 0x1111;
-		else if (rpiin == 0xE)
-			bcdout = 0x1110;
-		else if (rpiin == 0xD)
-			bcdout = 0x1101;
-		else if (rpiin == 0xC)
-			bcdout = 0x1100;
-			
-		if (rpiin == 0xE || 0xC) {
-			if (rpiin == 0xD || 0xC) { // holiday mode off, function like normal
-				if (digin == 0xF && XADC_Buf[3]>>4 > 1500) // sound the buzzer if motion is detected and light is below threshold
-					jcout = 3;
-				else if (digin == 0xD && XADC_Buf[3]>>4 > 1500)// turn off buzzer if there is no motion and light is above the threshold
-					jcout = 0;
+			active = 1;
+			holiday = 1;
 			}
-			else if (rpiin == 0xF || 0xE) { // holiday mode on, sound the buzzer at any intruder
-				if (digin == 0xF) // sound the buzzer if motion is detected
+		else if (rpiin == 0xE) {
+			bcdout = 0x1100;
+			active = 0;
+			holiday = 1;
+			}
+		else if (rpiin == 0xD) {
+			bcdout = 0x0011;
+			active = 1;
+			holiday = 0;
+			}
+		else if (rpiin == 0xC) {
+			bcdout = 0x0000;
+			active = 0;
+			holiday = 0;
+			}
+			
+		if (active == 1) { // system is active
+			if (holiday == 0) { // holiday mode off, function like normal
+				if (digin == 0xF && XADC_Buf[3]>>4 > 1500) { // sound the buzzer if motion is detected and light is below threshold
 					jcout = 3;
-				else if (digin == 0xD)// turn off buzzer if there is no motion
+					xil_printf("\rIntruder detected!!!");
+				} else // turn off buzzer if there is no motion and light is above the threshold
+					jcout = 0;
+			} else {
+				if (digin == 0xF) { // sound the buzzer if motion is detected
+					jcout = 3;
+					xil_printf("\rIntruder detected!!!");
+				} else // turn off buzzer if there is no motion
 					jcout = 0;
 			}
 		}
-
+		xil_printf("\n");
+		
 		XGpio_DiscreteWrite(&gpio, 2, led);
 		XGpio_DiscreteWrite(&gpio3, 1, jcout);
 		XGpio_DiscreteWrite(&gpio4, 1, bcdout);
-		xil_printf("\rbutton state: %08x\n",btn);
-		xil_printf("\r jbin: %08x, digin: %08x, rpiin: %08x\n",jbin,digin,rpiin);
+		//xil_printf("\rbutton state: %08x\n",btn);
+		//xil_printf("\r jbin: %08x, digin: %08x, rpiin: %08x\n",jbin,digin,rpiin);
+		
 		/******************end of section*************/
 
-		 /*****************************XADC section**************/
+		/*****************************XADC section**************/
+		
 		XSysMon_GetStatus(xadc_inst_ptr); //Clear the old status
+		
 		for (Index = 0;Index<RX_BUFFER_SIZE;Index++){
 			while((XSysMon_GetStatus(xadc_inst_ptr)& XSM_SR_EOS_MASK) != XSM_SR_EOS_MASK){
 				XADC_Buf[Index] = XSysMon_GetAdcData(xadc_inst_ptr,sample[Index]);
-			//xil_printf("Voltage %s = %d\n",channel[Index],XSysMon_RawToVoltage(XADC_Buf[Index]));
+				//xil_printf("Voltage %s = %d\n",channel[Index],XSysMon_RawToVoltage(XADC_Buf[Index]));
 			}
 		}
-
-		for(Index = 0;Index<RX_BUFFER_SIZE;Index++){
-		//xil_printf("Voltage=%d %s\n",channel[Index],XSysMon_RawToVoltage(XADC_Buf[Index]));
-		    xil_printf("RawData %s %d \n",channel[Index],(int)(XADC_Buf[Index]>>4));
-		}
-		xil_printf("   \n");
-		sleep(1);	
-
+		
+		//for(Index = 0;Index<RX_BUFFER_SIZE;Index++){
+			//xil_printf("Voltage=%d %s\n",channel[Index],XSysMon_RawToVoltage(XADC_Buf[Index]));
+		    //xil_printf("RawData %s %d \n",channel[Index],(int)(XADC_Buf[Index]>>4));
+		//}
+		sleep(1);
 		/****************end of section*************/
 	} //end of while(1)
 
