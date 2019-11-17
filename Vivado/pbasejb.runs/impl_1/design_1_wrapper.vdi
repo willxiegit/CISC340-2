@@ -2,8 +2,8 @@
 # Vivado v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Sun Nov 10 18:51:23 2019
-# Process ID: 2164
+# Start of session at: Sat Nov 16 15:21:55 2019
+# Process ID: 11772
 # Current directory: C:/Users/17igps/Desktop/project/pbasejb/pbasejb.runs/impl_1
 # Command line: vivado.exe -log design_1_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source design_1_wrapper.tcl -notrace
 # Log file: C:/Users/17igps/Desktop/project/pbasejb/pbasejb.runs/impl_1/design_1_wrapper.vdi
@@ -14,7 +14,7 @@ Command: open_checkpoint design_1_wrapper_routed.dcp
 
 Starting open_checkpoint Task
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.031 . Memory (MB): peak = 231.141 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.028 . Memory (MB): peak = 231.168 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 351 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-479] Netlist was created with Vivado 2018.2
@@ -27,9 +27,9 @@ INFO: [Project 1-853] Binary constraint restore complete.
 Reading XDEF placement.
 Reading placer database...
 Reading XDEF routing.
-Read XDEF File: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.495 . Memory (MB): peak = 1147.336 ; gain = 0.000
+Read XDEF File: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.462 . Memory (MB): peak = 1147.551 ; gain = 0.000
 Restored from archive | CPU: 0.000000 secs | Memory: 0.000000 MB |
-Finished XDEF File Restore: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.495 . Memory (MB): peak = 1147.336 ; gain = 0.000
+Finished XDEF File Restore: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.463 . Memory (MB): peak = 1147.551 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 112 instances were transformed.
   IOBUF => IOBUF (IBUF, OBUFT): 16 instances
@@ -38,7 +38,7 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   SRLC16E => SRL16E: 1 instances
 
 INFO: [Project 1-604] Checkpoint was created with Vivado v2018.2 (64-bit) build 2258646
-open_checkpoint: Time (s): cpu = 00:00:16 ; elapsed = 00:00:20 . Memory (MB): peak = 1147.336 ; gain = 924.703
+open_checkpoint: Time (s): cpu = 00:00:16 ; elapsed = 00:00:20 . Memory (MB): peak = 1147.551 ; gain = 925.324
 Command: write_bitstream -force design_1_wrapper.bit -bin_file
 Attempting to get a license for feature 'Implementation' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a35t'
@@ -71,9 +71,9 @@ Writing bitstream ./design_1_wrapper.bit...
 Writing bitstream ./design_1_wrapper.bin...
 INFO: [Vivado 12-1842] Bitgen Completed Successfully.
 INFO: [Project 1-120] WebTalk data collection is mandatory when using a WebPACK part without a full Vivado license. To see the specific WebTalk data collected for your design, open the usage_statistics_webtalk.html or usage_statistics_webtalk.xml file in the implementation directory.
-INFO: [Common 17-186] 'C:/Users/17igps/Desktop/project/pbasejb/pbasejb.runs/impl_1/usage_statistics_webtalk.xml' has been successfully sent to Xilinx on Sun Nov 10 18:52:04 2019. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2018.2/doc/webtalk_introduction.html.
+INFO: [Common 17-186] 'C:/Users/17igps/Desktop/project/pbasejb/pbasejb.runs/impl_1/usage_statistics_webtalk.xml' has been successfully sent to Xilinx on Sat Nov 16 15:22:36 2019. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2018.2/doc/webtalk_introduction.html.
 INFO: [Common 17-83] Releasing license: Implementation
 24 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
 write_bitstream completed successfully
-write_bitstream: Time (s): cpu = 00:00:20 ; elapsed = 00:00:18 . Memory (MB): peak = 1622.539 ; gain = 475.203
-INFO: [Common 17-206] Exiting Vivado at Sun Nov 10 18:52:04 2019...
+write_bitstream: Time (s): cpu = 00:00:19 ; elapsed = 00:00:18 . Memory (MB): peak = 1612.363 ; gain = 464.813
+INFO: [Common 17-206] Exiting Vivado at Sat Nov 16 15:22:36 2019...

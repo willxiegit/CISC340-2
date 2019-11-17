@@ -3971,3 +3971,198 @@ con
 ----------------End of Script----------------
 
 18:40:00 INFO  : Launch script is exported to file 'C:\Users\17igps\Desktop\project\pbasejb\pbasejb.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_pbaseapp.elf_on_local.tcl'
+20:18:31 INFO  : Launching XSCT server: xsct.bat -interactive C:\Users\17igps\Desktop\project\pbasejb\pbasejb.sdk\temp_xsdb_launch_script.tcl
+15:01:58 INFO  : Registering command handlers for SDK TCF services
+15:01:58 INFO  : Launching XSCT server: xsct.bat -interactive C:\Users\17igps\Desktop\project\pbasejb\pbasejb.sdk\temp_xsdb_launch_script.tcl
+15:02:01 INFO  : XSCT server has started successfully.
+15:02:01 INFO  : Successfully done setting XSCT server connection channel  
+15:02:03 INFO  : Successfully done setting SDK workspace  
+15:02:03 INFO  : Processing command line option -hwspec C:/Users/17igps/Desktop/project/pbasejb/pbasejb.sdk/design_1_wrapper.hdf.
+15:02:03 INFO  : Checking for hwspec changes in the project design_1_wrapper_hw_platform_2.
+15:12:44 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4D03A" && level==0} -index 0' command is executed.
+15:12:44 INFO  : 'fpga -state' command is executed.
+15:12:44 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:12:44 INFO  : Jtag cable 'Digilent Basys3 210183AB4D03A' is selected.
+15:12:44 INFO  : 'jtag frequency' command is executed.
+15:12:44 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+15:12:45 INFO  : Context for processor 'microblaze_0' is selected.
+15:12:45 INFO  : Processor reset is completed for 'microblaze_0'.
+15:12:46 INFO  : Context for processor 'microblaze_0' is selected.
+15:12:46 INFO  : The application 'C:/Users/17igps/Desktop/project/pbasejb/pbasejb.sdk/pbaseapp/Debug/pbaseapp.elf' is downloaded to processor 'microblaze_0'.
+15:12:46 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4D03A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4D03A"} -index 0
+dow C:/Users/17igps/Desktop/project/pbasejb/pbasejb.sdk/pbaseapp/Debug/pbaseapp.elf
+----------------End of Script----------------
+
+15:12:46 INFO  : Memory regions updated for context PA
+15:12:46 INFO  : Memory regions updated for context MicroBlaze Debug Module at USER2
+15:12:46 INFO  : Context for processor 'microblaze_0' is selected.
+15:12:46 INFO  : 'con' command is executed.
+15:12:46 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4D03A"} -index 0
+con
+----------------End of Script----------------
+
+15:12:46 INFO  : Launch script is exported to file 'C:\Users\17igps\Desktop\project\pbasejb\pbasejb.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_pbaseapp.elf_on_local.tcl'
+15:13:22 INFO  : Disconnected from the channel tcfchan#1.
+15:13:23 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4D03A" && level==0} -index 0' command is executed.
+15:13:23 INFO  : 'fpga -state' command is executed.
+15:13:23 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:13:23 INFO  : Jtag cable 'Digilent Basys3 210183AB4D03A' is selected.
+15:13:23 INFO  : 'jtag frequency' command is executed.
+15:13:23 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+15:13:23 INFO  : Context for processor 'microblaze_0' is selected.
+15:13:23 INFO  : Processor reset is completed for 'microblaze_0'.
+15:13:23 INFO  : Context for processor 'microblaze_0' is selected.
+15:13:23 INFO  : The application 'C:/Users/17igps/Desktop/project/pbasejb/pbasejb.sdk/pbaseapp/Debug/pbaseapp.elf' is downloaded to processor 'microblaze_0'.
+15:13:23 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4D03A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4D03A"} -index 0
+dow C:/Users/17igps/Desktop/project/pbasejb/pbasejb.sdk/pbaseapp/Debug/pbaseapp.elf
+----------------End of Script----------------
+
+15:13:23 INFO  : Memory regions updated for context PA
+15:13:23 INFO  : Memory regions updated for context MicroBlaze Debug Module at USER2
+15:13:24 INFO  : Context for processor 'microblaze_0' is selected.
+15:13:24 INFO  : 'con' command is executed.
+15:13:24 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4D03A"} -index 0
+con
+----------------End of Script----------------
+
+15:13:24 INFO  : Launch script is exported to file 'C:\Users\17igps\Desktop\project\pbasejb\pbasejb.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_pbaseapp.elf_on_local.tcl'
+15:17:15 INFO  : Disconnected from the channel tcfchan#2.
+15:17:16 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4D03A" && level==0} -index 0' command is executed.
+15:17:16 INFO  : 'fpga -state' command is executed.
+15:17:16 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:17:16 INFO  : Jtag cable 'Digilent Basys3 210183AB4D03A' is selected.
+15:17:16 INFO  : 'jtag frequency' command is executed.
+15:17:16 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+15:17:16 INFO  : Context for processor 'microblaze_0' is selected.
+15:17:16 INFO  : Processor reset is completed for 'microblaze_0'.
+15:17:16 INFO  : Context for processor 'microblaze_0' is selected.
+15:17:16 INFO  : The application 'C:/Users/17igps/Desktop/project/pbasejb/pbasejb.sdk/pbaseapp/Debug/pbaseapp.elf' is downloaded to processor 'microblaze_0'.
+15:17:16 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4D03A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4D03A"} -index 0
+dow C:/Users/17igps/Desktop/project/pbasejb/pbasejb.sdk/pbaseapp/Debug/pbaseapp.elf
+----------------End of Script----------------
+
+15:17:16 INFO  : Memory regions updated for context PA
+15:17:16 INFO  : Memory regions updated for context MicroBlaze Debug Module at USER2
+15:17:16 INFO  : Context for processor 'microblaze_0' is selected.
+15:17:16 INFO  : 'con' command is executed.
+15:17:16 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4D03A"} -index 0
+con
+----------------End of Script----------------
+
+15:17:16 INFO  : Launch script is exported to file 'C:\Users\17igps\Desktop\project\pbasejb\pbasejb.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_pbaseapp.elf_on_local.tcl'
+15:19:42 INFO  : Disconnected from the channel tcfchan#3.
+15:20:54 INFO  : Registering command handlers for SDK TCF services
+15:20:54 INFO  : Launching XSCT server: xsct.bat -interactive C:\Users\17igps\Desktop\project\pbasejb\pbasejb.sdk\temp_xsdb_launch_script.tcl
+15:20:56 INFO  : XSCT server has started successfully.
+15:20:56 INFO  : Successfully done setting XSCT server connection channel  
+15:20:58 INFO  : Processing command line option -hwspec C:/Users/17igps/Desktop/project/pbasejb/pbasejb.sdk/design_1_wrapper.hdf.
+15:20:58 INFO  : Successfully done setting SDK workspace  
+15:20:58 INFO  : Checking for hwspec changes in the project design_1_wrapper_hw_platform_2.
+15:21:18 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4D03A" && level==0} -index 0' command is executed.
+15:21:18 INFO  : 'fpga -state' command is executed.
+15:21:18 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:21:19 INFO  : Jtag cable 'Digilent Basys3 210183AB4D03A' is selected.
+15:21:19 INFO  : 'jtag frequency' command is executed.
+15:21:19 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+15:21:19 INFO  : Context for processor 'microblaze_0' is selected.
+15:21:19 INFO  : Processor reset is completed for 'microblaze_0'.
+15:21:19 INFO  : Context for processor 'microblaze_0' is selected.
+15:21:19 INFO  : The application 'C:/Users/17igps/Desktop/project/pbasejb/pbasejb.sdk/pbaseapp/Debug/pbaseapp.elf' is downloaded to processor 'microblaze_0'.
+15:21:19 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4D03A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4D03A"} -index 0
+dow C:/Users/17igps/Desktop/project/pbasejb/pbasejb.sdk/pbaseapp/Debug/pbaseapp.elf
+----------------End of Script----------------
+
+15:21:19 INFO  : Memory regions updated for context PA
+15:21:19 INFO  : Memory regions updated for context MicroBlaze Debug Module at USER2
+15:21:19 INFO  : Context for processor 'microblaze_0' is selected.
+15:21:19 INFO  : 'con' command is executed.
+15:21:19 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4D03A"} -index 0
+con
+----------------End of Script----------------
+
+15:21:19 INFO  : Launch script is exported to file 'C:\Users\17igps\Desktop\project\pbasejb\pbasejb.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_pbaseapp.elf_on_local.tcl'
+15:35:01 INFO  : Disconnected from the channel tcfchan#1.
+15:35:02 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4D03A" && level==0} -index 0' command is executed.
+15:35:02 INFO  : 'fpga -state' command is executed.
+15:35:02 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:35:02 INFO  : Jtag cable 'Digilent Basys3 210183AB4D03A' is selected.
+15:35:02 INFO  : 'jtag frequency' command is executed.
+15:35:02 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+15:35:02 INFO  : Context for processor 'microblaze_0' is selected.
+15:35:02 INFO  : Processor reset is completed for 'microblaze_0'.
+15:35:02 INFO  : Context for processor 'microblaze_0' is selected.
+15:35:02 INFO  : The application 'C:/Users/17igps/Desktop/project/pbasejb/pbasejb.sdk/pbaseapp/Debug/pbaseapp.elf' is downloaded to processor 'microblaze_0'.
+15:35:02 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4D03A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4D03A"} -index 0
+dow C:/Users/17igps/Desktop/project/pbasejb/pbasejb.sdk/pbaseapp/Debug/pbaseapp.elf
+----------------End of Script----------------
+
+15:35:02 INFO  : Memory regions updated for context PA
+15:35:02 INFO  : Memory regions updated for context MicroBlaze Debug Module at USER2
+15:35:02 INFO  : Context for processor 'microblaze_0' is selected.
+15:35:02 INFO  : 'con' command is executed.
+15:35:02 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4D03A"} -index 0
+con
+----------------End of Script----------------
+
+15:35:02 INFO  : Launch script is exported to file 'C:\Users\17igps\Desktop\project\pbasejb\pbasejb.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_pbaseapp.elf_on_local.tcl'
+15:52:58 INFO  : Disconnected from the channel tcfchan#2.
+15:52:59 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183AB4D03A" && level==0} -index 0' command is executed.
+15:52:59 INFO  : 'fpga -state' command is executed.
+15:52:59 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:52:59 INFO  : Jtag cable 'Digilent Basys3 210183AB4D03A' is selected.
+15:52:59 INFO  : 'jtag frequency' command is executed.
+15:52:59 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+15:52:59 INFO  : Context for processor 'microblaze_0' is selected.
+15:52:59 INFO  : Processor reset is completed for 'microblaze_0'.
+15:52:59 INFO  : Context for processor 'microblaze_0' is selected.
+15:52:59 INFO  : The application 'C:/Users/17igps/Desktop/project/pbasejb/pbasejb.sdk/pbaseapp/Debug/pbaseapp.elf' is downloaded to processor 'microblaze_0'.
+15:52:59 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4D03A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4D03A"} -index 0
+dow C:/Users/17igps/Desktop/project/pbasejb/pbasejb.sdk/pbaseapp/Debug/pbaseapp.elf
+----------------End of Script----------------
+
+15:52:59 INFO  : Memory regions updated for context PA
+15:52:59 INFO  : Memory regions updated for context MicroBlaze Debug Module at USER2
+15:52:59 INFO  : Context for processor 'microblaze_0' is selected.
+15:52:59 INFO  : 'con' command is executed.
+15:52:59 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Basys3 210183AB4D03A"} -index 0
+con
+----------------End of Script----------------
+
+15:52:59 INFO  : Launch script is exported to file 'C:\Users\17igps\Desktop\project\pbasejb\pbasejb.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_pbaseapp.elf_on_local.tcl'
+16:05:18 INFO  : Launching XSCT server: xsct.bat -interactive C:\Users\17igps\Desktop\project\pbasejb\pbasejb.sdk\temp_xsdb_launch_script.tcl

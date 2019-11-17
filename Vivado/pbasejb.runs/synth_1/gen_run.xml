@@ -77,14 +77,12 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018">
-      <Desc>Vivado Synthesis Defaults</Desc>
-    </StratHandle>
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
     <Step Id="synth_design"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_piezo_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_xbar_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_piezo_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_axi_gpio_3_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_sevenseg_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_axi_gpio_4_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_sevenseg_0_0"/>
 </GenRun>

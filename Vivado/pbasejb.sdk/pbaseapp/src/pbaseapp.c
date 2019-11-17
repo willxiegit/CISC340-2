@@ -95,37 +95,50 @@ int main()
 		sw  = XGpio_DiscreteRead(&gpio1,1);
 		jbin  = XGpio_DiscreteRead(&gpio2,1);
 		jcout = 0;//set to 0 for silence, 3 for high frequency buzzer
-		bcdout = 0x6969; // test display = 1234
 		digin = jbin & 0xF; //jb[3..0]
 		rpiin = (jbin & 0xF0)>>4; //jb[7..4];
 		
 		int active = 1;
 		int holiday = 0;
 		
+		bcdout = 0x0000;
+		
 		if (rpiin == 0xF) {
-			bcdout = 0x1111;
 			active = 1;
 			holiday = 1;
 			}
 		else if (rpiin == 0xE) {
-			bcdout = 0x1100;
 			active = 0;
 			holiday = 1;
 			}
 		else if (rpiin == 0xD) {
-			bcdout = 0x0011;
 			active = 1;
 			holiday = 0;
 			}
 		else if (rpiin == 0xC) {
-			bcdout = 0x0000;
 			active = 0;
 			holiday = 0;
 			}
 			
+		if(active == 1){
+			bcdout += 0x1000;
+		}
+		
+		if(holiday == 1){
+			bcdout += 0x0100;
+		}
+		
+		if(XADC_Buf[3]>>4 > 2000){
+			bcdout += 0x0010;
+		}
+		
+		if(digin == 0xF){
+			bcdout += 0x0001;
+		}
+		
 		if (active == 1) { // system is active
 			if (holiday == 0) { // holiday mode off, function like normal
-				if (digin == 0xF && XADC_Buf[3]>>4 > 1500) { // sound the buzzer if motion is detected and light is below threshold
+				if (digin == 0xF && XADC_Buf[3]>>4 > 2000) { // sound the buzzer if motion is detected and light is below threshold
 					jcout = 3;
 					xil_printf("\rIntruder detected!!!");
 				} else // turn off buzzer if there is no motion and light is above the threshold
@@ -145,6 +158,7 @@ int main()
 		XGpio_DiscreteWrite(&gpio4, 1, bcdout);
 		//xil_printf("\rbutton state: %08x\n",btn);
 		//xil_printf("\r jbin: %08x, digin: %08x, rpiin: %08x\n",jbin,digin,rpiin);
+		//fflush(stdout);
 		
 		/******************end of section*************/
 
@@ -163,8 +177,8 @@ int main()
 			//xil_printf("Voltage=%d %s\n",channel[Index],XSysMon_RawToVoltage(XADC_Buf[Index]));
 		    //xil_printf("RawData %s %d \n",channel[Index],(int)(XADC_Buf[Index]>>4));
 		//}
-		sleep(1);
 		/****************end of section*************/
+		//sleep(0.1);
 	} //end of while(1)
 
 	return 0;
